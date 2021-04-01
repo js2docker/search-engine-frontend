@@ -7,42 +7,12 @@
   box-sizing: border-box;
 }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
 .grid-container {
-  display: grid;
-  grid-template-columns: 80px 80px 80px 80px;
+  display: inline-grid;
+  grid-template-columns: 80px 80px 80px;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
+  margin: 15px;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -71,6 +41,57 @@
     font-size: 50px;
 }
 
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: show;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 .pancakeswap {
     background: #2874F0;
     
@@ -109,7 +130,7 @@
   display: table-cell;
   font-size: 14px;
   margin-left: 8px;
-  min-width: 120px;
+  min-width: 100px;
 }
 
 .example-button-row {
@@ -145,11 +166,12 @@ body {
   background: #ffff;
   color: #010101;
   /* center in the viewport */
-  min-height: 100vh;
+  min-height: 40vh;
   display: grid;
   font-family: "Open Sans", sans-serif;
   /* transition for the change in bg color */
   transition: background 0.2s ease-out;
+ 
 }
 
 /* display the anchor link side by side  */
@@ -275,7 +297,7 @@ a.active span {
 /* Search bar (header) */
 
 .searchBarMain {
-	background: #fff;
+background: #fff;
 	width: 90%;
 	max-width: 360px;
 	margin: 0 auto;
@@ -331,6 +353,7 @@ a.active span {
 
 img {
   border-radius: 15px;
+  margin-top: 9px;
 }
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -390,7 +413,51 @@ body {font-family: Verdana, sans-serif; margin:0}
   position: absolute;
   top: 0;
 }
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
 
+#myUL {
+  list-style-type: none;
+    grid-template-columns: 80px 80px 80px;
+   
+    display: inline-grid;
+    grid-column-gap: 50px;
+    text-align: center;
+
+}
+
+.center {
+  margin: auto;
+  width: 360px;
+  display:block;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+#myUL li a {
+  display: inline-block;
+    
+    margin: 0 2.2% 24px;
+    padding: 12px 6px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    width: 100px;
+    font-size: 13px;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -402,6 +469,8 @@ body {font-family: Verdana, sans-serif; margin:0}
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+.size-image {max-width: 114px;
+background-color: #2874F0}
 
 .active, .dot:hover {
   background-color: #000;
@@ -434,78 +503,70 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 
 <header class="page-header">
-	<div></div>
+	
+	<center>
+		
+	<img style='margin-top:120px' src='/logo.png'/>
 
-	<div class="searchBarMain" onclick="window.location.href='/search/q=QUERY';">
+</center>
+
+	<div class="searchBarMain">
 		<i class="material-icons searchBarSearchIcon noUserSelect">search</i>
-		<input type="text" name="header-search" value="" id="searchBarInput" >
+		<input type="text" name="header-search" value="" id="searchBarInput" onkeyup="weFunction()"  autofocus>
+	
 		<i class="material-icons clearSearchBarField noUserSelect" onClick="resetInput()">clear</i>
 	</div>
 
-</header>
-</head>
+	<center>
+<div class='center' id="listy">
+<ul id="myUL">
 
-<center>
-<div class="grid-container">
-    
-    
-  <div class="grid-item" onclick="window.location.href='https://pancakeswap.finance/';">
-  <span class="pancakeswap participant img-circle"><i class="fa fa-user" data-original-title="" title="">
-  <img src="https://bscscan.com/token/images/pancake_32.png?=v1" alt="PancakeSwap">
-  </i>
-  </span>
-  </div>
-  
-  <div class="grid-item" onclick="window.location.href='https://www.bakeryswap.org/';">
-      
-  <span class="bakery participant img-circle">
-  <i class="fa fa-user" data-original-title="" title="">
-  <img style='max-width: 32px;
-  max-height: 32px;' src="https://bscscan.com/token/images/bakeryswap_32.png" alt="BakerySwap"></i></span></div>
- 
-  <div class="grid-item" onclick="window.location.href='https://autofarm.network/';">
-  <span class="autofarm participant img-circle">
-  <i class="fa fa-user" data-original-title="" title="">
-  <img style='max-width: 32px;
-  max-height: 32px;' src="https://bscscan.com/token/images/autofarm_32.png" alt="Auto Farm"></i></span></div>  
-  
-  <div class="grid-item" onclick="window.location.href='http://venus.io/';">
-      
-      <span class="venus participant img-circle">
-  <i class="fa fa-user" data-original-title="" title="">
-  <img style='max-width: 32px;
-  max-height: 32px;' src="https://bscscan.com/token/images/venus_32.png" alt="Venus Protocol"></i></span></div>
-  
-  <div class="grid-item" onclick="window.location.href='https://www.coingecko.com/en';">
-      <span class="cream participant img-circle">
-  <i class="fa fa-user" data-original-title="" title="">
-  <img style='max-width: 32px;
-  max-height: 32px;' src="https://bscscan.com/token/images/creamfinance_32.png" alt="Cream Finance"></i></span></div>
-  
-  <div class="grid-item" onclick="window.location.href='https://ditto.money/';">
-      <span class="ditto participant img-circle">
-  <i class="fa fa-user" data-original-title="" title="">
-  <img style='max-width: 32px;
-  max-height: 32px;' src="https://bscscan.com/token/images/ditto_32.png" alt="Ditto Money"></i></span></div>  
-  
-  <div class="grid-item" onclick="window.location.href='https://pancakebunny.finance/';">
-      <span class="pancakebunny participant img-circle">
-  <i class="fa fa-user" data-original-title="" title="">
-  <img style='max-width: 32px;
-  max-height: 32px;' src="https://bscscan.com/token/images/pancakebunny_32.png" alt="Pancake Bunny"></i></span></div>
-  
-  <div class="grid-item" onclick="window.location.href='https://bdollar.fi/';">
-      <span class="bdollar participant img-circle">
-  <i class="fa fa-user" data-original-title="" title="">
-  <img style='max-width: 32px;
-  max-height: 32px;' src="https://bscscan.com/token/images/bdollar_32.png" alt="bDollar"></i></span></div>
+  <li><a href="#"><div class="pancakeswap participant img-circle"><img src="/pancake_32.webp" alt="PancakeSwap"></div>PancakeSwap</a></li>
 
+  <li><a href="#"><div class="bakery participant img-circle"><img src="/bakeryswap_32.webp" alt="BakerySwap"></div>BakerySwap</a></li>
+
+  <li><a href="#"><div class="cream participant img-circle"><img src="/creamfinance_32.webp" alt="Cream Finance"></div>Cream Finance</a></li>
+
+  <li><a href="#"><div class="ditto participant img-circle">
+  	<img src="/ditto_32.webp" alt="Ditto"></div>Ditto.Money</a></li>
+
+  <li><a href="#"><div class="pancakebunny participant img-circle"><img src="/pancakebunny_32.webp" alt="Pancake Bunny"></div>Pancake Bunny</a></li>
+
+  <li><a href="#"><div class="bdollar participant img-circle"><img src="/bdollar_32.webp" alt="bDollar"></div>bDollar</a></li>
+
+
+
+</ul>
 </div>
 </center>
+</header>
+</head>
 <center>
 <div class="nomics-ticker-widget" data-name="Binance Coin" data-base="BNB" data-quote="USD"></div><script src="https://widget.nomics.com/embed.js"></script>
 </center>
 
+
+
+
+</script>
+<script>
+function weFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchBarInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+	</script>
 <script>
 console.clear()
 
