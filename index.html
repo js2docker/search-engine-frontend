@@ -277,7 +277,23 @@ a.active span {
 }
 
 /* ========== Main Styles ========== */
+@media (min-width: 720px) {
+	#myUL {
+		grid-template-columns: 80px 80px 80px 80px 80px;
+	}
+}
 
+@media (max-width: 480px) {
+	#myUL {
+		grid-template-columns: 80px 80px 80px;
+	}
+}
+
+@media (min-width: 900px) {
+	#myUL {
+		grid-template-columns: 80px 80px 80px 80px 80px 80px;
+	}
+}
 
 /* Disable selection with class "noUserSelect" */
 
@@ -426,7 +442,6 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 #myUL {
   list-style-type: none;
-    grid-template-columns: 80px 80px 80px;
 
     display: inline-grid;
     grid-column-gap: 50px;
@@ -436,7 +451,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 .center {
   margin: auto;
-  width: 360px;
+  
   display:block;
   margin-top: 20px;
   box-sizing: border-box;
