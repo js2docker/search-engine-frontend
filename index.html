@@ -563,6 +563,23 @@ background-color: #2874F0}
 <center>
 <div class="nomics-ticker-widget" data-name="Binance Coin" data-base="BNB" data-quote="USD"></div><script src="https://widget.nomics.com/embed.js"></script>
 </center>
-
+<script>
+function weFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchBarInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+	</script>
 </body>
 </html>
