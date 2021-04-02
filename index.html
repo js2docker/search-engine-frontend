@@ -4,500 +4,441 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
-  box-sizing: border-box;
+	box-sizing: border-box
 }
-
 .grid-container {
-  display: inline-grid;
-  grid-template-columns: 80px 80px 80px;
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
-  margin: 15px;
+	display: inline-grid;
+	grid-template-columns: 80px 80px 80px;
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	margin: 15px
 }
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50px;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 0.9;
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: 50px;
+	padding: 10px;
+	font-size: 30px;
+	text-align: center;
+	line-height: .9
 }
 .grid-item:hover {
-    background-color: #fff;
-    cursor:pointer;
+	background-color: #fff;
+	cursor: pointer
 }
-.participant{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    
-    -webkit-border-radius: 50px;
-       -moz-border-radius: 50px;
-            border-radius: 50px;
+.participant {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px
 }
 .participant i {
-    font-size: 50px;
+	font-size: 50px
 }
-
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+	background-color: #4caf50;
+	color: #fff;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer
 }
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
+.dropbtn:focus,
+.dropbtn:hover {
+	background-color: #3e8e41
 }
-
 #myInput {
-  box-sizing: border-box;
-  background-image: url('searchicon.png');
-  background-position: 14px 12px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: none;
-  border-bottom: 1px solid #ddd;
+	box-sizing: border-box;
+	background-image: url(searchicon.png);
+	background-position: 14px 12px;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	padding: 14px 20px 12px 45px;
+	border: none;
+	border-bottom: 1px solid #ddd
 }
-
-#myInput:focus {outline: 3px solid #ddd;}
-
+#myInput:focus {
+	outline: 3px solid #ddd
+}
 .dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block
 }
-
 .dropdown-content {
-  display: show;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
-  border: 1px solid #ddd;
-  z-index: 1;
+	display: show;
+	position: absolute;
+	background-color: #f6f6f6;
+	min-width: 230px;
+	overflow: auto;
+	border: 1px solid #ddd;
+	z-index: 1
 }
-
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: #000;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block
 }
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
+.dropdown a:hover {
+	background-color: #ddd
+}
+.show {
+	display: block
+}
 .pancakeswap {
-    background: #2874F0;
-    
+	background: #2874f0
 }
 .bakery {
-    background: #FFC874;
-    
+	background: #ffc874
 }
 .autofarm {
-    background: #E33442;
-    
+	background: #e33442
 }
 .venus {
-    background: #F9E0AE;
-    
+	background: #f9e0ae
 }
 .cream {
-    background: #F1F2F4;
-    
+	background: #f1f2f4
 }
 .ditto {
-    background: #F8CDEA;
-    
+	background: #f8cdea
 }
 .pancakebunny {
-    background: #EC6998;
-    border: 1px solid rgba(0, 0, 0, 0);
-    
+	background: #ec6998;
+	border: 1px solid transparent
 }
 .bdollar {
-    background: #000000;
-    border: 1px solid rgba(0, 0, 0, 0);
+	background: #000;
+	border: 1px solid transparent
 }
-
 .example-label {
-  display: table-cell;
-  font-size: 14px;
-  margin-left: 8px;
-  min-width: 100px;
+	display: table-cell;
+	font-size: 14px;
+	margin-left: 8px;
+	min-width: 100px
 }
-
 .example-button-row {
-  display: table-cell;
-  width: 490px;
+	display: table-cell;
+	width: 490px
 }
-
 .example-button-row .mat-button-base {
-  margin: 8px 8px 8px 0;
+	margin: 8px 8px 8px 0
 }
-
 .example-flex-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap
 }
-
 .example-button-container {
-  display: flex;
-  justify-content: center;
-  width: 120px;
+	display: flex;
+	justify-content: center;
+	width: 120px
 }
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0
 }
-
-/* by default include the background of the option for the home navigation */
 body {
-  background: #EEE9FD;
-  color: #010101;
-  /* center in the viewport */
-  min-height: 40vh;
-  display: grid;
-  font-family: "Open Sans", sans-serif;
-  /* transition for the change in bg color */
-  transition: background 0.2s ease-out;
- 
+	background: #eee9fd;
+	color: #010101;
+	min-height: 40vh;
+	display: grid;
+	font-family: "Open Sans", sans-serif;
+	transition: background .2s ease-out
 }
-
-/* display the anchor link side by side  */
 nav {
-  display: flex;
-  background: #fff;
-  /* considerable whitespace surrounding the navigation's items */
-  padding: 2rem 3.15rem;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+	display: flex;
+	background: #fff;
+	padding: 2rem 3.15rem;
+	border-radius: 0 0 30px 30px;
+	box-shadow: 0 1px 15px rgba(0, 0, 0, .1)
 }
-
-/* remove default style and slightly separate the anchor links from one another */
 a {
-  color: inherit;
-  text-decoration: none;
-  margin: 0 0.2rem;
-  /* display the svg icon and span elements side by side, vertically aligned */
-  display: flex;
-  align-items: center;
-  /* include padding for the background applied on the active item */
-  padding: 0.75rem 1.25rem;
-  border-radius: 30px;
-  /* position relative for the pseudo element */
-  position: relative;
-  /* custom properties for the colors picked up by the elements when clicked (and updated for each link in the script) */
-  --hover-bg: #5b37b720;
-  --hover-c: #5b37b7;
+	color: inherit;
+	text-decoration: none;
+	margin: 0 .2rem;
+	display: flex;
+	align-items: center;
+	padding: .75rem 1.25rem;
+	border-radius: 30px;
+	position: relative;
+	--hover-bg: #5b37b720;
+	--hover-c: #5b37b7
 }
-
-/* include considerable negative margin to have the svg icon overlapping with the span element */
 a svg {
-  margin-right: -2.5rem;
-  width: 28px;
-  height: 28px;
-  pointer-events: none;
-  /* transition for the change in margin */
-  transition: margin 0.2s ease-out;
+	margin-right: -2.5rem;
+	width: 28px;
+	height: 28px;
+	pointer-events: none;
+	transition: margin .2s ease-out
 }
-/* by default hide the span element */
 a span {
-  opacity: 0;
-  visibility: hidden;
-  font-size: 0.9rem;
-  margin-left: 0.9rem;
+	opacity: 0;
+	visibility: hidden;
+	font-size: .9rem;
+	margin-left: .9rem
 }
-/* include with a pseudo element relative to the anchor link a circle, with a fixed with and height */
 a:before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 0;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  /* positioned to the left of the anchor link and scaled to 0 */
-  transform: translate(0%, -50%) scale(0);
-  visibility: visible;
-  opacity: 1;
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 0;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	transform: translate(0, -50%) scale(0);
+	visibility: visible;
+	opacity: 1
 }
-/* when active */
-/* specify the colors dictated by the custom properties */
 a.active {
-  background: var(--hover-bg);
-  color: var(--hover-c);
+	background: var(--hover-bg);
+	color: var(--hover-c)
 }
-/* using the color specified by the then updated custom property show the circle of the pseudo element increasing its size and highlighting it momentarily */
 a.active:before {
-  background: var(--hover-c);
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0%, -50%) scale(2);
-  /* transition only when the class is applied */
-  transition: all 0.4s ease-out;
+	background: var(--hover-c);
+	opacity: 0;
+	visibility: hidden;
+	transform: translate(0, -50%) scale(2);
+	transition: all .4s ease-out
 }
-/* remove the margin applied to the svg to make it overlay atop the anchor link */
 a.active svg {
-  margin-right: 0;
+	margin-right: 0
 }
-/* show the span element */
 a.active span {
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.2s ease-out;
+	visibility: visible;
+	opacity: 1;
+	transition: all .2s ease-out
 }
-
-/* on smaller viewports show the navigation bar on the side, attached to the left of the screen */
 @media (max-width: 500px) {
-  nav {
-    flex-direction: column;
-    justify-self: start;
-    border-radius: 0 30px 30px 0;
-    padding: 2rem 1.15rem 2rem 0.75rem;
-  }
-  /* change the margin separating the anchor link elements now dividing the elements vertically */
-  nav a {
-    margin: 0.5rem 0;
-  }
-  /* remove the negative margin from the svg elements, as the width is to be taken in full */
-  nav svg {
-    margin: 0;
-  }
+	nav {
+		flex-direction: column;
+		justify-self: start;
+		border-radius: 0 30px 30px 0;
+		padding: 2rem 1.15rem 2rem .75rem
+	}
+	nav a {
+		margin: .5rem 0
+	}
+	nav svg {
+		margin: 0
+	}
 }
-
-/* ========== Main Styles ========== */
-
-
-/* Disable selection with class "noUserSelect" */
-
+@media (max-width: 600px) {
+#myUL {
+    grid-template-columns: 80px 80px 80px;
+	}
+@media (min-width: 800px) {
+#myUL {
+    grid-template-columns: 80px 80px 80px 80px 80px;
+	}
+	
 .noUserSelect {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
+	user-select: none
 }
-
-
-
-/* ========== Page header (Top bar) ========== */
-
-.topchartjs {max-width: 100%}
-
-/* Search bar (header) */
-
+.topchartjs {
+	max-width: 100%
+}
 .searchBarMain {
-background: #fff;
+	background: #fff;
 	width: 90%;
 	max-width: 360px;
 	margin: 0 auto;
 	height: 42px;
 	margin-top: 11px;
 	border-radius: 50px;
-	box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14);
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-	
+	box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .14);
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
 	left: 0;
 	right: 0;
 	top: 0;
-	cursor:pointer;
+	cursor: pointer
 }
-
 .searchBarMain i.searchBarSearchIcon {
 	height: 100%;
 	line-height: 42px;
 	float: left;
 	width: 52px;
 	text-align: center;
-	color: rgba(68, 68, 68, 0.5);
+	color: rgba(68, 68, 68, .5)
 }
-
 .searchBarMain input#searchBarInput {
 	height: 42px;
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
-	background: transparent;
-	outline: none;
+	background: 0 0;
+	outline: 0;
 	padding-right: 32px;
 	font-size: 16px;
-	color: rgba(0, 0, 0, 0.76);
+	color: rgba(0, 0, 0, .76);
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
-	cursor:pointer;
+	font-family: Roboto, sans-serif;
+	cursor: pointer
 }
-
 .searchBarMain i.clearSearchBarField {
 	position: absolute;
 	right: 12px;
 	top: 11px;
-	color: rgba(0, 0, 0, 0.84);
+	color: rgba(0, 0, 0, .84);
 	display: none;
 	font-size: 20px;
-	cursor:pointer;
+	cursor: pointer
 }
-
 img {
-  border-radius: 15px;
-  margin-top: 9px;
+	border-radius: 15px;
+	margin-top: 9px
 }
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-
-/* Slideshow container */
+* {
+	box-sizing: border-box
+}
+body {
+	font-family: Verdana, sans-serif;
+	margin: 0
+}
+.mySlides {
+	display: none
+}
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  padding-top: 50px;
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	padding-top: 50px
 }
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 57%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.next,
+.prev {
+	cursor: pointer;
+	position: absolute;
+	top: 57%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	transition: .6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none
 }
-
-/* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+	right: 0;
+	border-radius: 3px 0 0 3px
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.next:hover,
+.prev:hover {
+	background-color: rgba(0, 0, 0, .8)
 }
-
-/* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center
 }
-
-/* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0
 }
 #myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+	background-image: url(/css/searchicon.png);
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px
 }
-
 #myUL {
-  list-style-type: none;
-    grid-template-columns: 80px 80px 80px;
-   
-    display: inline-grid;
-    grid-column-gap: 50px;
-    text-align: center;
-
+	list-style-type: none;
+	grid-template-columns: 80px 80px 80px;
+	display: inline-grid;
+	grid-column-gap: 50px;
+	text-align: center
 }
-
 .center {
-  margin: auto;
-  width: 360px;
-  display:block;
-  margin-top: 20px;
-  box-sizing: border-box;
+	margin: auto;
+	width: 360px;
+	display: block;
+	margin-top: 20px;
+	box-sizing: border-box
 }
-
 #myUL li a {
-  display: inline-block;
-    
-    margin: 0 2.2% 24px;
-    padding: 12px 6px;
-    text-align: center;
-    border: 1px solid #CECECE;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    width: 100px;
-    font-size: 13px;
-background-color: #ffff;
+	display: inline-block;
+	margin: 0 2.2% 24px;
+	padding: 12px 6px;
+	text-align: center;
+	border: 1px solid #cecece;
+	border-radius: 8px;
+	transition: all .2s ease;
+	width: 100px;
+	font-size: 13px;
+	background-color: #ffff
 }
-
 #myUL li a:hover:not(.header) {
-  background-color: #eee;
+	background-color: #eee
 }
-/* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color .6s ease
 }
-.size-image {max-width: 114px;
-background-color: #2874F0}
-
-.active, .dot:hover {
-  background-color: #000;
+.size-image {
+	max-width: 114px;
+	background-color: #2874f0
 }
-
-/* Fading animation */
+.active,
+.dot:hover {
+	background-color: #000
+}
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s
 }
-
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
 }
-
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
 }
-
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+	.next,
+	.prev,
+	.text {
+		font-size: 11px
+	}
 }
 </style>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -547,284 +488,6 @@ background-color: #2874F0}
 <center>
 <div class="nomics-ticker-widget" data-name="Binance Coin" data-base="BNB" data-quote="USD"></div><script src="https://widget.nomics.com/embed.js" defer></script>
 </center>
-
-
-
-
-</script>
-<script>
-function weFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("searchBarInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-	</script>
-<script>
-console.clear()
-
-const data = [
-  'Amazon',
-  'Flipkart',
-  'Ola',
-  'Pharmeasy',
-  'Swiggy',
-  'Uber',
-  'Zomato',
-  'Zoomcar',
-]
-
-class Autocomplete {
-  constructor({
-    rootNode,
-    inputNode,
-    resultsNode,
-    searchFn,
-    shouldAutoSelect = false,
-    onShow = () => {},
-    onHide = () => {}
-  } = {}) {
-    this.rootNode = rootNode
-    this.inputNode = inputNode
-    this.resultsNode = resultsNode
-    this.searchFn = searchFn
-    this.shouldAutoSelect = shouldAutoSelect
-    this.onShow = onShow
-    this.onHide = onHide
-    this.activeIndex = -1
-    this.resultsCount = 0
-    this.showResults = false
-    this.hasInlineAutocomplete = this.inputNode.getAttribute('aria-autocomplete') === 'both'
-
-    // Setup events
-    document.body.addEventListener('click', this.handleDocumentClick)
-    this.inputNode.addEventListener('keyup', this.handleKeyup)
-    this.inputNode.addEventListener('keydown', this.handleKeydown)
-    this.inputNode.addEventListener('focus', this.handleFocus)
-    this.resultsNode.addEventListener('click', this.handleResultClick)
-  }
-  
-  handleDocumentClick = event => {
-    if (event.target === this.inputNode || this.rootNode.contains(event.target)) {
-      return
-    }
-    this.hideResults()
-  }
-
-  handleKeyup = event => {
-    const { key } = event
-
-    switch (key) {
-      case 'ArrowUp':
-      case 'ArrowDown':
-      case 'Escape':
-      case 'Enter':
-        event.preventDefault()
-        return
-      default:
-        this.updateResults()
-    }
-    
-    if (this.hasInlineAutocomplete) {
-      switch(key) {
-        case 'Backspace':
-          return
-        default:
-          this.autocompleteItem()
-      }
-    }
-  }
-  
-  handleKeydown = event => {
-    const { key } = event
-    let activeIndex = this.activeIndex
-    
-    if (key === 'Escape') {
-      this.hideResults()
-      this.inputNode.value = ''
-      return
-    }
-    
-    if (this.resultsCount < 1) {
-      if (this.hasInlineAutocomplete && (key === 'ArrowDown' || key === 'ArrowUp')) {
-        this.updateResults()
-      } else {
-        return
-      }
-    }
-    
-    const prevActive = this.getItemAt(activeIndex)
-    let activeItem
-    
-    switch(key) {
-      case 'ArrowUp':
-        if (activeIndex <= 0) {
-          activeIndex = this.resultsCount - 1
-        } else {
-          activeIndex -= 1
-        }
-        break
-      case 'ArrowDown':
-        if (activeIndex === -1 || activeIndex >= this.resultsCount - 1) {
-          activeIndex = 0
-        } else {
-          activeIndex += 1
-        }
-        break
-      case 'Enter':
-        activeItem = this.getItemAt(activeIndex)
-        this.selectItem(activeItem)
-        return
-      case 'Tab':
-        this.checkSelection()
-        this.hideResults()
-        return
-      default:
-        return
-    }
-    
-    event.preventDefault()
-    activeItem = this.getItemAt(activeIndex)
-    this.activeIndex = activeIndex
-    
-    if (prevActive) {
-      prevActive.classList.remove('selected')
-      prevActive.setAttribute('aria-selected', 'false')
-    }
-    
-    if (activeItem) {
-      this.inputNode.setAttribute('aria-activedescendant', `autocomplete-result-${activeIndex}`)
-      activeItem.classList.add('selected')
-      activeItem.setAttribute('aria-selected', 'true')
-      if (this.hasInlineAutocomplete) {
-        this.inputNode.value = activeItem.innerText
-      }
-    } else {
-      this.inputNode.setAttribute('aria-activedescendant', '')
-    }
-  }
-  
-  handleFocus = event => {
-    this.updateResults()
-  }
-  
-  handleResultClick = event => {
-    if (event.target && event.target.nodeName === 'LI') {
-      this.selectItem(event.target)
-    }
-  }
-  
-  getItemAt = index => {
-    return this.resultsNode.querySelector(`#autocomplete-result-${index}`)
-  }
-  
-  selectItem = node => {
-    if (node) {
-      this.inputNode.value = node.innerText
-      this.hideResults()
-    }
-  }
-  
-  checkSelection = () => {
-    if (this.activeIndex < 0) {
-      return
-    }
-    const activeItem = this.getItemAt(this.activeIndex)
-    this.selectItem(activeItem)
-  }
-  
-  autocompleteItem = event => {
-    const autocompletedItem = this.resultsNode.querySelector('.selected')
-    const input = this.inputNode.value
-    if (!autocompletedItem || !input) {
-      return
-    }
-    
-    const autocomplete = autocompletedItem.innerText
-    if (input !== autocomplete) {
-      this.inputNode.value = autocomplete
-      this.inputNode.setSelectionRange(input.length, autocomplete.length)
-    }
-  }
-  
-  updateResults = () => {
-    const input = this.inputNode.value
-    const results = this.searchFn(input)
-    
-    this.hideResults()
-    if (results.length === 0) {
-      return
-    }
-    
-    this.resultsNode.innerHTML = results.map((result, index) => {
-      const isSelected = this.shouldAutoSelect && index === 0
-      if (isSelected) {
-        this.activeIndex = 0
-      }
-      return `
-        <li
-          id='autocomplete-result-${index}'
-          class='autocomplete-result${isSelected ? ' selected' : ''}'
-          role='option'
-          ${isSelected ? "aria-selected='true'" : ''}
-        >
-          ${result}
-        </li>
-      `
-    }).join('')
-    
-    this.resultsNode.classList.remove('hidden')
-    this.rootNode.setAttribute('aria-expanded', true)
-    this.resultsCount = results.length
-    this.shown = true
-    this.onShow()
-  }
-  
-  hideResults = () => {
-    this.shown = false
-    this.activeIndex = -1
-    this.resultsNode.innerHTML = ''
-    this.resultsNode.classList.add('hidden')
-    this.rootNode.setAttribute('aria-expanded', 'false')
-    this.resultsCount = 0
-    this.inputNode.setAttribute('aria-activedescendant', '')
-    this.onHide()
-  }
-}
-
-const search = input => {
-  if (input.length < 1) {
-    return []
-  }
-  return data.filter(item => item.toLowerCase().startsWith(input.toLowerCase()))
-}
-
-const autocomplete = new Autocomplete({
-  rootNode: document.querySelector('.autocomplete'),
-  inputNode: document.querySelector('.autocomplete-input'),
-  resultsNode: document.querySelector('.autocomplete-results'),
-  searchFn: search,
-  shouldAutoSelect: true
-})
-
-document.querySelector('form').addEventListener('submit', (event) => {
-  event.preventDefault()
-  const result = document.querySelector('.search-result')
-  const input = document.querySelector('.autocomplete-input')
-  result.innerHTML = 'Searched for: ' + input.value
-})
-
-</script>
 
 </body>
 </html>
